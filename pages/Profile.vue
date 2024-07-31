@@ -14,7 +14,10 @@
               </div>
             </div>
           </div>
-          <button class="w-full bg-blue-600 text-white py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition duration-300">Logout</button>
+          <button
+            class="w-full bg-blue-600 text-white py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition duration-300"
+            @click="logout"
+          >Logout</button>
         </div>
       </div>
     </div>
@@ -22,4 +25,7 @@
 </template>
 
 <script setup lang="ts">
+function logout () {
+  navigateTo('/Verification')
+}
 </script>
