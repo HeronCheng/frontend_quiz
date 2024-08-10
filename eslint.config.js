@@ -2,9 +2,9 @@ import globals from "globals";
 import pluginJs from "@eslint/js";
 import tseslint from "typescript-eslint";
 import pluginVue from "eslint-plugin-vue";
+import withNuxt from './.nuxt/eslint.config.mjs'
 
-
-export default [
+export default withNuxt(
   {
     files: ["**/*.{js,mjs,cjs,ts,vue}"]
   },
@@ -24,4 +24,4 @@ export default [
       }
     }
   },
-];
+);
