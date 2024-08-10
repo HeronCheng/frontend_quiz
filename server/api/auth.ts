@@ -5,13 +5,13 @@ export default defineEventHandler(async event => {
     return {
       "username": "John Doe",
       "quote": "I'm king of the world",
-      "photo": '_nuxt/public/madness.png'
+      "photo": 'https://img.icons8.com/face'
     }
   } else if (authorization === 'zzyyxx') {
     return {
       "username": "Doe John",
       "quote": "Hello, World!",
-      "photo": '_nuxt/public/cool.png'
+      "photo": 'https://img.icons8.com/girl'
     }
   } else {
     return {
