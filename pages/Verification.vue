@@ -75,12 +75,18 @@ const code = computed(() => {
 })
 
 onMounted(() => {
+  getAuth();
   firstInput.value?.focus();
   document.addEventListener('paste', handlePaste);
 })
 onUnmounted(() => {
   document.removeEventListener('paste', handlePaste);
 })
+
+async function getAuth () {
+  const token = sessionStorage.getItem('token');
+  if (token) navigateTo('/Profile');
+}
 
 function onKeyDown(e: KeyboardEvent) {
   const target = e.target as HTMLInputElement;
