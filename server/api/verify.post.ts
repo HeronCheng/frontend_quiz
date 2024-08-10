@@ -4,9 +4,15 @@ export default defineEventHandler(async event => {
   if (code === 1234) {
     return {
         "valid": true,
-        "token": "valid token"
+        "token": "xxyyzz"
     }
-  } else {
+  } else if (code === 4321) {
+    return {
+        "valid": true,
+        "token": "zzyyxx"
+    }
+  }
+  else {
     return {
         "valid": false
     }
